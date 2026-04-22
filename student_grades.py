@@ -74,8 +74,7 @@ def main():
     #results = StudentsGrades([85, 42, 91, 67, 50, 73, 100, 38, 58])
 
     results = StudentsGrades(random_numbers(30, 0, 100))
-    print(random_results.count())
-    print(random_results.get_sorted())
+
 
     print(f"počet studentů: {results.count()}")
     for x, body in enumerate(results):
@@ -84,8 +83,6 @@ def main():
             print(f"plný počet(index): {x}")
 
     print(results.get_sorted())
-
-
 
 
 if __name__ == "__main__":
