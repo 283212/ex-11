@@ -106,8 +106,5 @@ if __name__ == "__main__":
     # print(results.get_sorted())  # [38, 42, 50, 58, 67, 73, 85, 91, 100]
     # print(results.scores)  # [85, 42, 91, 67, 50, 73, 100, 38, 58]  ← beze změny
 
-    random_results = StudentsGrades(random_numbers(30, 0, 100))
-    print(random_results.count())
-    print(random_results.get_sorted())
 
     main()
