@@ -45,6 +45,8 @@ def bubble_sort(values):
 
     for e in range(velikost):
 
+        swap = False
+
         p = 0
 
         for j in range(velikost - 1):
@@ -64,7 +66,12 @@ def bubble_sort(values):
             if values[prvni_index] > values[druhy_index]:
                 values[prvni_index], values[druhy_index] = values[druhy_index], values[prvni_index]
 
+                swap = True
+
             p += 1
+
+        if swap == False:
+            return values
 
         print(values)
 
