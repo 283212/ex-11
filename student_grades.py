@@ -4,6 +4,9 @@ class StudentsGrades:
     def __init__(self, scores):
         self.scores = scores
 
+    def __iter__(self):
+        return iter(self.scores)
+
     def get_by_index(self, index):
         return self.scores[index]
 
@@ -67,15 +70,20 @@ class StudentsGrades:
 
         return scores
 
-    def main(self):
-        results = StudentsGrades([85, 42, 91, 67, 50, 73, 100, 38, 58])
-        print(f"počet studentů: {results.count()}")
-        for x, body in enumerate(results):
-            print(f"Student {x}: {body} points – {results.get_grade(body)}")
-            if body == 100:
-                print(f"plný počet(index): {x}")
+def main():
+    #results = StudentsGrades([85, 42, 91, 67, 50, 73, 100, 38, 58])
 
-        print(results.get_sorted())
+    results = StudentsGrades(random_numbers(30, 0, 100))
+    print(random_results.count())
+    print(random_results.get_sorted())
+
+    print(f"počet studentů: {results.count()}")
+    for x, body in enumerate(results):
+        print(f"Student {x}: {body} points – {results.get_grade(x)}")
+        if body == 100:
+            print(f"plný počet(index): {x}")
+
+    print(results.get_sorted())
 
 
 
@@ -101,3 +109,5 @@ if __name__ == "__main__":
     random_results = StudentsGrades(random_numbers(30, 0, 100))
     print(random_results.count())
     print(random_results.get_sorted())
+
+    main()
